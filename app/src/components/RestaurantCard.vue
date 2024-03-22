@@ -3,20 +3,24 @@
 /**
  * Restaurant
  */
-// {
-//   id: string
-//   name: string
-//   address: string
-//   website: string
-//   status: string
-// }
 
 import { defineComponent } from 'vue'
+//helps typescript understand the Options API convention for property types
+import type { PropType } from 'vue'
+
+type Restaurant = {
+  id: string
+  name: string
+  address: string
+  website: string
+  status: string
+}
 
 export default defineComponent({
   props: {
     restaurant: {
-      type: Object,
+      //provides a more specific type of Object
+      type: Object as PropType<Restaurant>,
       required: true,
     },
   },
