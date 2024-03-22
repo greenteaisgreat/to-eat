@@ -6,6 +6,7 @@
 
 import { defineComponent } from 'vue'
 //helps typescript understand the Options API convention for property types
+//it MUST be prefaced with 'type', as that's basically all it is
 import type { PropType } from 'vue'
 
 type Restaurant = {
