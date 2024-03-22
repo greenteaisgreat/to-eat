@@ -1,4 +1,5 @@
-<script>
+<!-- tells vue to use the typescript compiler -->
+<script lang="ts">
 /**
  * Restaurant
  */
@@ -10,7 +11,9 @@
 //   status: string
 // }
 
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     restaurant: {
       type: Object,
@@ -37,7 +40,7 @@ export default {
       this.$emit('delete-restaurant', this.restaurant)
     },
   },
-}
+})
 </script>
 
 <template>
